@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="comp" class="com.tech.Company">
+	<property name="id" value="100"></property>
+	<property name="cname" value="TCS"></property>
+	<property name="employee" ref="emp"></property>
+	
+	</bean>
+	
+	<bean id="emp" class="com.tech.Employee">
+	<property name="ename" value="Virat"></property>
+	<property name="eemail" value="virat@gmail.com"></property>
+	<property name="address" ref="add"></property>
+	
+	</bean>
+	
+	<bean id="add" class="com.tech.Address">
+	<property name="cityname" value="nagar"></property>
+	<property name="pincode" value="1234"></property>
+	
+	</bean>
+	
+	</beans>
